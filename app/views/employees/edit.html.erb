@@ -1,0 +1,31 @@
+<h1>Edit Employee</h1>
+
+<%= form_with model: @employee do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @employee.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :designation %><br>
+    <%= form.text_area :designation %><br>
+    <% @employee.errors.full_messages_for(:designation).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :grade %><br>
+    <%= form.text_area :grade %><br>
+    <% @employee.errors.full_messages_for(:grade).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

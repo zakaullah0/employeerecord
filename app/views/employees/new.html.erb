@@ -1,0 +1,22 @@
+<h1>New Employee</h1>
+
+<%= form_with model: @employee do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :designation %><br>
+    <%= form.text_field :designation %>
+  </div>
+
+  <div>
+    <%= form.label :grade %><br>
+    <%= form.text_field :grade %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
